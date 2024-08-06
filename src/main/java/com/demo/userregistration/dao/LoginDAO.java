@@ -1,6 +1,6 @@
 package com.demo.userregistration.dao;
 
-import javax.transaction.Transactional;
+import jakarta.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,7 @@ import com.demo.userregistration.vo.LoginRequest;
 @Component
 public class LoginDAO {
 	
-	@Autowired
+    @Autowired
 	private LoginRepository loginRepository;
 	
 

@@ -18,7 +18,7 @@ import com.demo.userregistration.vo.SignUpResponse;
 @RequestMapping("/v1")
 public class RegistrationController {
 
-	@Autowired
+    @Autowired
 	private SignUpService signUpService;
 
 
