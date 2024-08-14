@@ -39,7 +39,7 @@ def post_github_comment(issue, suggestion, repo, pr_number, github_token):
     g = Github(github_token)
     repo = g.get_repo(repo)
     pull_request = repo.get_pull(pr_number)
-    body = f"Issue: {issue['message']}\n\nSuggestion: {suggestion}\n\nFile: {issue['component']}\nLine: {issue.get('line', 'N/A')}"
+    body = f"Issue: {issue['message']}\n\nSuggestion:\n {suggestion}\n\nFile: {issue['component']}\nLine: {issue.get('line', 'N/A')}"
     pull_request.create_issue_comment(body)
 
 def main():
