@@ -25,7 +25,7 @@ public class RegistrationControllerTest {
 
  @Before
  public void setup() {
-MockitoAnnotations.openMocks(this);
+    MockitoAnnotations.openMocks(this);
  }
 
  @Test

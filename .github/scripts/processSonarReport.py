@@ -19,8 +19,8 @@ def get_openai_suggestions(issue_description, api_key):
         response = openai.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": f"Provide a suggestion to fix the following issue:\n\n{issue_description}"}
+                {"role": "system", "content": "You are a helpful software development assistant."},
+                {"role": "user", "content": f"Provide a suggestion to fix the following issue, including:\n1. A technical explanation of the code issue\n2. A proposed solution with refactored code:\n\n{issue_description}"}
             ],
             max_tokens=100,
             n=1,
