@@ -9,6 +9,7 @@ import com.demo.userregistration.exception.LoginException;
 import com.demo.userregistration.model.UserEntity;
 import com.demo.userregistration.repository.LoginRepository;
 import com.demo.userregistration.vo.LoginRequest;
+import com.demo.userregistration.vo.LoginRequest;
 
 @Component
 public class LoginDAO {
