@@ -22,7 +22,7 @@ public class LoginController {
 	private LoginService loginService;
 
 	@PostMapping("/login")
-    public ResponseEntity<LoginResponse> loginUser(@RequestBody LoginRequest loginRequest) {
+    public ResponseEntity<LoginResponse> loginUser(@RequestBody LoginRequest loginRequest, String emailAddress) {
 
         try {
             // Attempt to log in the user
