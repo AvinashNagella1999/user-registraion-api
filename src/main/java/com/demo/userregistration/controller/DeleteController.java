@@ -16,29 +16,10 @@ import com.demo.userregistration.vo.LoginResponse;
 
 @RestController
 @RequestMapping("/v1")
-public class LoginController {
+public class DeleteController {
 
     @Autowired
 	private LoginService loginService;
-
-	@PostMapping("/login")
-    public ResponseEntity<LoginResponse> loginUser(@RequestBody LoginRequest loginRequest) {
-
-        try {
-            // Attempt to log in the user
-            LoginResponse loginResponse = loginService.loginUser(loginRequest);
-
-            if ("400".equals(loginResponse.getStatus())) {
-                return ResponseEntity.badRequest().body(loginResponse);
-            }
-
-            return ResponseEntity.ok(loginResponse);
-
-        } catch (LoginException le) {
-            // Handle exception if any during user login
-            throw new LoginException("Exception occurred while logging in the user");
-        }
-    }
 
 	@PostMapping("/delete")
     public ResponseEntity<DeleteResponse> deleteUser(@RequestBody DeleteRequest deleteRequest) {
