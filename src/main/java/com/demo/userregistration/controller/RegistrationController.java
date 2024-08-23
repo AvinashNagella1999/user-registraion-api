@@ -10,15 +10,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.userregistration.exception.SignUpException;
+import com.demo.userregistration.exception.LoginException;
 import com.demo.userregistration.service.SignUpService;
 import com.demo.userregistration.vo.SignUpRequest;
+import com.demo.userregistration.vo.LoginRequest;
 import com.demo.userregistration.vo.SignUpResponse;
 
 @RestController
 @RequestMapping("/v1")
 public class RegistrationController {
 
-	@Autowired
+    @Autowired
 	private SignUpService signUpService;
 
 

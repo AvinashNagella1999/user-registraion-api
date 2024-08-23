@@ -10,7 +10,7 @@ import com.demo.userregistration.repository.SignUpRepository;
 @Component
 public class SignUpDAO {
 	
-	@Autowired
+    @Autowired
 	private SignUpRepository signUpRepository;
 	
 

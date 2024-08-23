@@ -18,7 +18,7 @@ import com.demo.userregistration.vo.LoginResponse;
 @RequestMapping("/v1")
 public class LoginController {
 
-	@Autowired
+    @Autowired
 	private LoginService loginService;
 
 	@PostMapping("/login")

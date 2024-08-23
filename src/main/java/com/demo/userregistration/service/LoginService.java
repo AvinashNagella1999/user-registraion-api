@@ -10,18 +10,19 @@ import com.demo.userregistration.vo.DeleteRequest;
 import com.demo.userregistration.vo.DeleteResponse;
 import com.demo.userregistration.vo.LoginRequest;
 import com.demo.userregistration.vo.LoginResponse;
+import com.demo.userregistration.vo.LoginResponse;
 
 @Service
 public class LoginService {
 	
-	@Autowired
+    @Autowired
 	private LoginDAO loginDao;
 
 	public LoginResponse loginUser(LoginRequest loginRequest) {
         LoginResponse loginResponse = new LoginResponse();
         UserEntity userEntity = loginDao.existsByEmailAndPassword(loginRequest);
 
-        if (userEntity == null) {
+        if (userEntity.equals(null)) {
             loginResponse.setStatus("400");
             loginResponse.setMessage("User login failed");
             throw new LoginException("Exception occurred while logging in the user");
