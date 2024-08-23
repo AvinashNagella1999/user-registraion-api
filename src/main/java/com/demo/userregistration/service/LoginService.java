@@ -22,7 +22,7 @@ public class LoginService {
         LoginResponse loginResponse = new LoginResponse();
         UserEntity userEntity = loginDao.existsByEmailAndPassword(loginRequest);
 
-        if (userEntity == null) {
+        if (userEntity.equals(null)) {
             loginResponse.setStatus("400");
             loginResponse.setMessage("User login failed");
             throw new LoginException("Exception occurred while logging in the user");
